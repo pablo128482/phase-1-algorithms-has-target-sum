@@ -11,13 +11,11 @@ function binarySearch(ar,num){
   }
   return false;
 }
- //==========================================================
- //===== why the code after return is being executed ????====
- //==========================================================
+
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+
    array.sort((a,b)=>{return a>b? 1:-1;})
-    // console.log(array,target)
+    
     let status=false;
     if(array[0]+array[1]>target || array[array.length-1]+array[array.length-1]<target) return false;
     for(let i=0;i<array.length;i++){
@@ -30,24 +28,8 @@ function hasTargetSum(array, target) {
      return status
 
 }
-
-// console.log(hasTargetSum([1,2,5],4 ))  
-
-/* 
-  Write the Big O time complexity of your function here
-*/
-
-/* 
-  Add your pseudocode here
-*/
-
-/*
-  Add written explanation of your solution here
-*/
-
-//You can run `node index.js` to view these console logs
 if (require.main === module) {
-  // add your own custom tests in here
+
   console.log("Expecting: true");
   console.log("=>", hasTargetSum([3, 8, 12, 4, 11, 7], 10));
 
